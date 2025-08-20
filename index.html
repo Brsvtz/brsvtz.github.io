@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
-<link rel="icon" type="image/png" href="https://i.postimg.cc/B6MtNJG6/banana-favicon.png">  
+<link rel="icon" type="image/png" href="https://i.postimg.cc/B6MtNJG6/banana-favicon.png">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,9 +21,12 @@
           background: 
     radial-gradient(1200px 800px at 50% 20%, rgba(18,32,49,0.9) 0%, rgba(11,15,20,0.95) 90%),
     url("https://i.postimg.cc/MHtw51Kh/banana.png") repeat center center;
-          background-size: auto, auto;
+          background-size: auto, auto; /* controla tamanho do gradiente e da imagem */
           color: var(--fg);
-          display: grid;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh
           place-items: center;
 }
     .wrap {
@@ -33,6 +36,13 @@
     }
     .label {
       font-size: clamp(16px, 2.3vw, 22px);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .label2 {
+      font-size: clamp(16px, 2.3vw, 16px);
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--muted);
@@ -87,12 +97,12 @@
     
     .side-img {
       position: absolute;
-       left: 20px;       
+       left: 20px;      
        top: 50%;        
        transform: translateY(-50%); 
        max-height: 200px;  
        width: auto;
-       opacity: 0.9;  
+       opacity: 0.9;      
     }
   </style>
 </head>
@@ -117,12 +127,16 @@
         <div class="u">Segundos</div>
       </div>
     </div>
-    <p>
+    <p></p>
     <div class="label">fugindo do trabalho, mas recebendo um salário<br> de R$17 mil com dinheiro do contribuinte</div>
-
-    <div class="footer">E lutando contra a soberania do Brasil desde <span class="accent">27 de fevereiro de 2025</span>.</div>
+      <div class="label2">Enquanto isso o povo brasileiro já bancou para o deputado:
+        <li>R$ 357.615,61 em cota parlamentar</li>
+        <li>R$ 1.318.886,07 em verba de gabinete</li>
+        <li>R$ 51.036,00 em auxílio-moradia</li>
+       </div>
+       <div class="footer">Fonte:   <a href="https://www.camara.leg.br/deputados/92346?ano=2022">camara.leg.br</a></div>
   </main>
-
+  
   <script>
  
     const start = new Date('2025-02-27T00:00:00-03:00');
@@ -161,5 +175,3 @@
   </script>
 </body>
 </html>
-
-
