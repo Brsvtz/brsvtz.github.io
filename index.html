@@ -16,12 +16,15 @@
       margin: 0;
     }
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 50% 20%, #122031 0%, var(--bg) 60%);
-      color: var(--fg);
-      display: grid;
-      place-items: center;
-    }
+          font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+          background: 
+    radial-gradient(1200px 800px at 50% 20%, rgba(18,32,49,0.9) 0%, rgba(11,15,20,0.95) 90%),
+    url("https://i.postimg.cc/MHtw51Kh/banana.png") repeat center center;
+          background-size: auto, auto; /* controla tamanho do gradiente e da imagem */
+          color: var(--fg);
+          display: grid;
+          place-items: center;
+}
     .wrap {
       text-align: center;
       padding: 24px;
@@ -80,9 +83,20 @@
       color: var(--muted);
     }
     .accent { color: var(--accent); }
+    
+    .side-img {
+      position: absolute;
+       left: 20px;       /* distância da borda esquerda */
+       top: 50%;         /* centraliza verticalmente */
+       transform: translateY(-50%); /* corrige alinhamento vertical */
+       max-height: 200px;  /* tamanho máximo */
+       width: auto;
+       opacity: 0.9;       /* opcional: um pouco translúcido */
+    }
   </style>
 </head>
 <body>
+
   <main class="wrap" role="main" aria-live="polite">
     <div class="label">Eduardo Bolsonaro está há</div>
     <h1 class="days" id="days">0<span class="unit">dias</span></h1>
@@ -103,7 +117,7 @@
       </div>
     </div>
     <p>
-    <div class="label">fugindo do trabalho, mas recebendo salário<br> com dinheiro do contribuinte</div>
+    <div class="label">fugindo do trabalho, mas recebendo um salário<br> de R$17 mil com dinheiro do contribuinte</div>
 
     <div class="footer">E lutando contra a soberania do Estado brasileiro desde <span class="accent">27 de fevereiro de 2025</span>.</div>
   </main>
